@@ -1,1 +1,0 @@
-select Name from Royals where sex = "f" and Born > 1960 and Born < 1990
