@@ -1,0 +1,1 @@
+Select Name,Born from Royals where Name = "Beatrice"

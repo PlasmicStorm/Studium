@@ -1,0 +1,1 @@
+select Name, (Died - Born) As "Age" from Royals where name = "Diana"

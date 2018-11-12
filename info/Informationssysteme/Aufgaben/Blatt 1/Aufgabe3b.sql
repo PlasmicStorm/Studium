@@ -1,0 +1,1 @@
+Select Name from royals where Title = "Duchess" or Title = "Countess"

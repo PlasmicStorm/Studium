@@ -1,0 +1,1 @@
+select Name from Royals where sex = "m" and Born < 1960

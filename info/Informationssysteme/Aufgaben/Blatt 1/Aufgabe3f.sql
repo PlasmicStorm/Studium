@@ -1,0 +1,1 @@
+Select Name from Royals where sex = "m" and Title is NULL
