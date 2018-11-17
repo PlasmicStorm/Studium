@@ -3,6 +3,15 @@
 #include <math.h>
 #include <time.h>
 
+/*
+    Author:
+        Simon Liessem   3100948
+        Jan Simon Mathy 3206479
+        Vincent Pamatat 3187769
+        Nicolas Gassen  3230009
+        Marc Flintrop   3208023
+*/
+
 #define pi 3.141592653589793238462643383279
 
 long long fakultaet(int n);
@@ -75,12 +84,10 @@ int binomialkoeffizient(int n, int k) {
     return 0;
 }
 
-// Gibt den Nachfolger des übergebenen Wertes zurück
 int succ(int x) {
     return ++x;
 }
 
-// Gibt den Vorgänger des übergebenen Wertes zurück
 int pre(int x) {
     return --x;
 }
@@ -102,7 +109,7 @@ int sub(int x, int y) {
 int mult(int x, int y) {
     if(y == 0)
         return 0;
-    return(add(x, mult(x, pre(y))));
+    return add(x, mult(x, pre(y)));
 }
 
 double dSin(float x) {
@@ -154,19 +161,21 @@ void initializegenerator() {
 
 void muenzrueckgabe() {
     int muenzen[] = {50, 20, 10, 5, 2, 1};
-    int iLow = rand() % 200;
-    int iHigh = 0;
+    int iLow = rand() % 200, 
+        iHigh = 0;
+    
     getInput:
         printf("Enter a Number higher than %d\n>", iLow);
         scanf("%d", &iHigh);
         if(iHigh < iLow)
             goto getInput;
+    
     int iDiff = iHigh - iLow;
     printf("Rückgeld: ");
     for(int i = 0; i <= 5; i++) {
         while(iDiff - muenzen[i] >= 0) {
             iDiff -= muenzen[i];
-            printf("%d ", muenzen[i]);
+            printf("(%d) ", muenzen[i]);
         }
     }
     printf("\n");
