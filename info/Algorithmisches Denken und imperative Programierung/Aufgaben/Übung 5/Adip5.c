@@ -31,9 +31,9 @@ int main() {
     else
         printf("'%s' ist kein Palindrom\n", sInput);
     //Aufgabe 1b I
-    printf("%s\n", decrypt(encrypt("Ich will 10 Tomaten!")));
+    printf("%s\n", decrypt(encrypt("„Fix 4 Schwyz!“, quäkt Jürgen blöd vom Paß.")));
     //Aufgabe 1b II
-    printf("%s\n", decryptByN(encryptByN("Wer braucht schon 10 Tomaten?", 20), 20));
+    printf("%s\n", decryptByN(encryptByN("„Fix 4 Schwyz!“, quäkt Jürgen blöd vom Paß.", 23), 23));
 }
 
 char *reverseString(char *sInput) {
